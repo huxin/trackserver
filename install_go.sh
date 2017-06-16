@@ -1,4 +1,4 @@
-#!/usr/bin/back
+#!/usr/bin/bash
 set -x
 set -e
 
