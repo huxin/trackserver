@@ -1,0 +1,24 @@
+description "Gironde"
+
+# Wait for network and filesystem to come up
+start on (net-device-up
+          and local-filesystems
+          and runlevel [2345])
+
+stop on runlevel [!2345]
+
+# Keep an eye on the service and restart if it crashes
+# respawn the job up to 20 times within a 5 second period.
+# If the job exceeds these values, it will be stopped and
+# marked as failed.
+respawn
+respawn limit 100 5
+
+env DIR=/root/trackserver
+env BIN=trackserver
+
+# Call the server
+script
+    cd ${DIR}
+    exec ${DIR}/${BIN}
+end script
