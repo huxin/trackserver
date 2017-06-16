@@ -1,4 +1,4 @@
-description "Gironde"
+description "trackserver"
 
 # Wait for network and filesystem to come up
 start on (net-device-up
