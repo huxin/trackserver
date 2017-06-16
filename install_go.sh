@@ -8,4 +8,4 @@ tar zxvf go.tar.gz
 echo "export GOROOT=/root/go/" >> /root/.bashrc
 mkdir /root/proj
 echo "export GOPATH=/root/proj" >> /root/.bashrc
-echo "export PATH=$PATH:$GOROOT/bin/"
+echo "export PATH=$PATH:$GOROOT/bin/" >> /root/.bashrc
